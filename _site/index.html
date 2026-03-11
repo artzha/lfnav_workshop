@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="Workshop at IROS 2026: Learning Across Navigation Fields: Challenges and Future Work.">
+  <meta name="keywords" content="Field Robotics, Data, Navigation, Robot Learning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Learning Across Navigation Fields: Challenges and Future Work – IROS 2026</title>
+
+  <!-- Fonts and CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <!-- jQuery (if needed for any interactivity) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+
+
+  <!-- Navbar with subsections -->
+  <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navbarMain" class="navbar-menu">
+      <div class="navbar-start" style="flex-grow:1;justify-content:center;">
+        <a class="navbar-item" href="#home">Home</a>
+        <a class="navbar-item" href="#speakers">Speakers</a>
+        <!-- <a class="navbar-item" href="#panelists">Panelists</a> -->
+        <a class="navbar-item" href="#cfp">Call for Papers</a>
+        <a class="navbar-item" href="#organizers">Organizers</a>
+        <a class="navbar-item" href="#sponsors">Sponsors</a>
+      </div>
+    </div>
+  </nav>
+  <script>
+    // Bulma burger menu toggle
+    document.addEventListener('DOMContentLoaded', function () {
+      var burgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+      burgers.forEach(function (el) {
+        el.addEventListener('click', function () {
+          var target = el.dataset.target;
+          var $target = document.getElementById(target);
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+        });
+      });
+    });
+  </script>
+
+
+
+
+  <section class="hero" id="home">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Learning Across Navigation Fields: Challenges and Future Work –
+              IROS 2026</h1>
+            <div class="is-size-5 publication-authors">
+
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"><sup>1</sup>Carnegie Mellon University, </span>
+                <span class="author-block"><sup>2</sup>University of Stanford, </span>
+                <span class="author-block"><sup>3</sup>University of Texas at Austin, </span>
+                <span class="author-block"><sup>4</sup>Ewha Womans University</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+
+  <!-- GrandTour Logo at the top -->
+  <div style="width:100%;text-align:center;margin-top:0em;margin-bottom:0em;">
+    <img src="./static/images/iros.jpg" alt="ICRA Logo" style="max-height:160px;width:auto;height:80vw;">
+
+    <!-- <img src="./static/images/gt_logo_finished_rev1.svg" alt="GrandTour Logo"
+      style="margin-left:7em;max-height:160px;width:auto;height:80vw;"> -->
+  </div>
+
+
+
+  <!-- 
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Challenge</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+
+          </div> 
+-->
+
+
+  <!-- About Workshop -->
+  <section class="section" id="speakers">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered">About the Workshop</h2>
+      <div class="content has-text-justified">
+        <p>
+          Robot navigation in the wild is a high-impact problem in robotics that is essential to many applications such
+          as last-mile delivery, off-road driving, construction and monitoring, and many others. This challenging,
+          central problem in robotics brings together research in many fields such as machine learning, foundation
+          models, planning, perception, controls.
+
+          This workshop will serve as a chance to gather researchers across many sub-fields of navigation (e.g. indoor,
+          urban, off-road) to discuss similarities and differences in the challenges and approaches to various subfields
+          of the robot navigation problem. (TODO write this sentence better). This will be accomplished via a series of
+          talks from experts from both academia and industry, a panel discussion, and presentations of workshop papers.
+
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="challenge">
+    <div class="container">
+      <h2 class="title is-3 has-text-centered">Speakers</h2>
+      <div class="columns is-multiline">
+
+        <!-- Speaker 1 -->
+        <div class="column is-half">
+          <div class="box">
+            <div class="columns is-vcentered">
+              <div class="column is-narrow">
+                <figure class="image is-128x128">
+                  <img src="./static/images/speaker/ayoubraji.jpg" alt="Ayoub Raji" class="speaker-crop"
+                    data-crop-x="50" data-crop-y="50" data-zoom="1.2">
+                </figure>
+              </div>
+              <div class="column">
+                <h3 class="title is-5">Controls for High Speed Racing</h3>
+                <p><strong>Ayoub Raji</strong></p>
+                <p>Unimore</p>
+                <span style="display: flex; gap: 0.5em; align-items: center;">
+                  <a href="https://scholar.google.com/citations?user=cxY2wrIAAAAJ&hl=en&oi=ao" target="_blank"
+                    rel="noopener" class="button is-small is-link is-rounded" style="margin-top:0.6em;">
+                    <span class="icon">
+                      <img src="./static/images/google-scholar.svg" alt="Google Scholar" style="height:2em;width:2em;">
+                    </span>
+                    <span>Google Scholar</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speaker 2 -->
+        <div class="column is-half">
+          <div class="box">
+            <div class="columns is-vcentered">
+              <div class="column is-narrow">
+                <figure class="image is-128x128">
+                  <img src="./static/images/speaker/boleizhou.jpg" alt="Bolei Zhu" class="speaker-crop" data-crop-x="50"
+                    data-crop-y="50" data-zoom="1.2">
+                </figure>
+              </div>
+              <div class="column">
+                <h3 class="title is-5">Simulation for Outdoor Navigation</h3>
+                <p><strong>Bolei Zhu</strong></p>
+                <p>UCLA / Coco Robotics</p>
+                <span style="display: flex; gap: 0.5em; align-items: center;">
+                  <a href="https://boleizhou.github.io/" class="button is-small is-dark is-rounded mt-2">Webpage</a>
+                  <a href="https://scholar.google.com/citations?user=9D4aG8AAAAAJ&hl=en" target="_blank" rel="noopener"
+                    class="button is-small is-link is-rounded" style="margin-top:0.6em;">
+                    <span class="icon">
+                      <img src="./static/images/google-scholar.svg" alt="Google Scholar" style="height:2em;width:2em;">
+                    </span>
+                    <span>Google Scholar</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Speaker 3 -->
+        <div class="column is-half">
+          <div class="box">
+            <div class="columns is-vcentered">
+              <div class="column is-narrow">
+                <figure class="image is-128x128">
+                  <img src="./static/images/speaker/giseopkim.jpg" alt="Giseop Kim" class="speaker-crop"
+                    data-crop-x="50" data-crop-y="50" data-zoom="1.2">
+                </figure>
+              </div>
+              <div class="column">
+                <h3 class="title is-5">State Estimation and Mapping</h3>
+                <p><strong>Giseop Kim</strong></p>
+                <p>DGIST</p>
+                <span style="display: flex; gap: 0.5em; align-items: center;">
+                  <a href="https://sites.google.com/view/aprl-dgist"
+                    class="button is-small is-dark is-rounded mt-2">Webpage</a>
+                  <a href="https://scholar.google.com/citations?user=9mKOLX8AAAAJ&hl=en&oi=ao" target="_blank"
+                    rel="noopener" class="button is-small is-link is-rounded" style="margin-top:0.6em;">
+                    <span class="icon">
+                      <img src="./static/images/google-scholar.svg" alt="Google Scholar" style="height:2em;width:2em;">
+                    </span>
+                    <span>Google Scholar</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- Speaker 4 -->
+        <div class="column is-half">
+          <div class="box">
+            <div class="columns is-vcentered">
+              <div class="column is-narrow">
+                <figure class="image is-128x128">
+                  <img src="./static/images/speaker/kristenholtz.jpg" alt="Kristen Holtz" class="speaker-crop"
+                    data-crop-x="50" data-crop-y="50" data-zoom="1.2">
+                </figure>
+              </div>
+              <div class="column">
+                <h3 class="title is-5">Aerial Mobility for Autonomous Drones</h3>
+                <p><strong>Kristen Holtz</strong></p>
+                <p>Skydio</p>
+                <span style="display: flex; gap: 0.5em; align-items: center;">
+                  <a href="https://scholar.google.com/citations?user=16YyObMAAAAJ&hl=en&oi=ao" target="_blank"
+                    rel="noopener" class="button is-small is-link is-rounded" style="margin-top:0.6em;">
+                    <span class="icon">
+                      <img src="./static/images/google-scholar.svg" alt="Google Scholar" style="height:2em;width:2em;">
+                    </span>
+                    <span>Google Scholar</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <!-- Speaker 5 -->
+        <div class="column is-half">
+          <div class="box">
+            <div class="columns is-vcentered">
+              <div class="column is-narrow">
+                <figure class="image is-128x128">
+                  <img src="./static/images/speaker/markuswulfmeier.jpg" alt="Markus Wulfmeier" class="speaker-crop"
+                    data-crop-x="50" data-crop-y="50" data-zoom="1.2">
+                </figure>
+              </div>
+              <div class="column">
+                <h3 class="title is-5">Theoretical Foundations of Navigation</h3>
+                <p><strong>Markus Wulfmeier</strong></p>
+                <p>Google DeepMind</p>
+                <span style="display: flex; gap: 0.5em; align-items: center;">
+                  <a href="https://sites.google.com/view/mwulfmeier/bio"
+                    class="button is-small is-dark is-rounded mt-2">Webpage</a>
+                  <a href="https://scholar.google.com/citations?user=YCO3WQsAAAAJ" target="_blank" rel="noopener"
+                    class="button is-small is-link is-rounded" style="margin-top:0.6em;">
+                    <span class="icon">
+                      <img src="./static/images/google-scholar.svg" alt="Google Scholar" style="height:2em;width:2em;">
+                    </span>
+                    <span>Google Scholar</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- <section class="section" id="cfp">
+    <div class="container is-max-desktop">
+
+      <div style="display: flex; align-items: center; justify-content: center; gap: 1.5em; margin-bottom: 1.5em;">
+        <h2 class="title is-3" style="margin-bottom: 0;"></h2>
+      </div>
+      <div class="content has-text-justified">
+        <div style="display: flex; align-items: center; gap: 2em;">
+          <div style="flex: 0 1 80%;">
+            <p style="margin-bottom: 0;">
+              We invite participants to push the boundaries of navigation in the wild by submitting 2 to 4 page
+              double-column extended abstracts (with unlimited references and appendices) presenting new or recently
+              published works. Extended abstracts will not be included in the official IROS proceedings and generally do
+              not conflict with dual-submission policies. Submissions must be anonymous and follow the official IROS
+              2026 formatting guidelines. We recommend using the IROS 2026 <a
+                href="https://ras.papercept.net/conferences/support/tex.php" target="_blank" rel="noopener">LaTeX
+                template</a>.
+            </p>
+          </div>
+          <div style="flex: 0 1 15%; display: flex; justify-content: flex-end;">
+            <img src="./static/images/gt_logo_finished_rev1.svg" alt="GrandTour Logo"
+              style="max-width:100%; width:100%; height:auto; min-width:60px;">
+          </div>
+        </div>
+        <h4 class="title is-5">Prize Money</h4>
+        <ul>
+          <li><strong>1st Place:</strong> $1,000 USD</li>
+          <li><strong>2nd Place:</strong> $750 USD</li>
+          <li><strong>3rd Place:</strong> $500 USD</li>
+        </ul>
+        <p class="mt-3">
+          <strong>Note:</strong> To claim the prize money, winners must present their results at the workshop.
+        </p>
+        <p class="is-size-7">
+          <em>Further details on prize amounts, submission process, evaluation, and additional constraints will be
+            announced soon.</em>
+        </p>
+      </div>
+    </div>
+  </section> -->
+
+
+  <section class="section" id="cfp">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Call for Papers</h2>
+      <div class="content has-text-justified">
+        <p>
+          We invite participants to push the boundaries of navigation in the wild by submitting 2 to 4 page
+          double-column extended abstracts (with unlimited references and appendices) presenting new or recently
+          published works. Extended abstracts will not be included in the official IROS proceedings and generally do not
+          conflict with dual-submission policies. Submissions must be anonymous and follow the official IROS 2026
+          formatting guidelines. We recommend using the IROS 2026 <a
+            href="https://ras.papercept.net/conferences/support/tex.php" target="_blank" rel="noopener">LaTeX
+            template</a>.
+
+          Papers should be broadly related to the theme of the workshop, including but not limited to:
+        <ul>
+          <li>Data for field robotics</li>
+          <li>State estimation, LiO, ViO</li>
+          <li>Benchmarking and evaluation of in-the-wild navigation</li>
+          <li>Multi-modality sensing</li>
+          <li>Navigation & Traversability</li>
+          <li>Autonomy stacks</li>
+          <li>Real-world deployment at scale</li>
+          </p>
+        </ul>
+        <h4 class="title is-5">Submission Timeline</h4>
+        Please submit the extended abstract via OpenReview.
+        We provide two submission tracks: (1) <em>regular review</em> and (2) <em>fast-track review</em>.
+
+        Papers previously published elsewhere are eligible for fast-track review, where editors will assess only the
+        suitability and relevance of the content.
+
+        <div class="content">
+          <ul>
+            <li><strong>Submission portal:</strong> OpenReview (link TBA)</li>
+            <li><strong>Submission opens:</strong> 1 March 2026</li>
+            <li><strong>Submission deadline:</strong> 1 May 2026</li>
+            <li><strong>Notification to authors:</strong> 12 May 2026</li>
+            <li><strong>Camera-ready submission:</strong> 15 May 2026</li>
+          </ul>
+        </div>
+        <p class="is-size-7">
+          <em>Best paper awards will also be announced at the workshop.</em>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="organizers">
+    <div class="container has-text-centered">
+      <h2 class="title is-3">Organizers</h2>
+
+
+      <div class="columns is-centered">
+        <div class="column is-narrow">
+          <figure class="image is-128x128">
+            <img src="./static/images/organizer/arthur.jpeg" alt="Arthur Zhang" class="speaker-crop" data-crop-x="50"
+              data-crop-y="50" data-zoom="1.0">
+          </figure>
+          <p><strong>Arthur Zhang</strong></p>
+          <p>UT Austin</p>
+          <a href="mailto:arthurz@cs.utexas.edu" class="button is-small is-dark is-rounded mt-2">Mail</a>
+        </div>
+        <div class="column is-narrow">
+          <figure class="image is-128x128">
+            <img src="./static/images/organizer/cherie.jpeg" alt="Cherie Ho" class="speaker-crop" data-crop-x="50"
+              data-crop-y="50" data-zoom="1.0">
+          </figure>
+          <p><strong>Cherie Ho</strong></p>
+          <p>Stanford</p>
+          <a href="mailto:cherieho@stanford.edu" class="button is-small is-dark is-rounded mt-2">Mail</a>
+        </div>
+        <div class="column is-narrow">
+          <figure class="image is-128x128">
+            <img src="./static/images/organizer/daeun.jpeg" alt="Daeun Song" class="speaker-crop" data-crop-x="50"
+              data-crop-y="50" data-zoom="1.0">
+          </figure>
+          <p><strong>Daeun Song</strong></p>
+          <p>GMU</p>
+          <a href="mailto:daeunsong@gmu.edu" class="button is-small is-dark is-rounded mt-2">Mail</a>
+        </div>
+
+
+        <div class="column is-narrow">
+          <figure class="image is-128x128">
+            <img src="./static/images/organizer/jing.jpeg" alt="Jing Liang" class="speaker-crop" data-crop-x="50"
+              data-crop-y="50" data-zoom="1.0">
+          </figure>
+          <p><strong>Jing Liang</strong></p>
+          <p>Stanford</p>
+          <a href="mailto:jingliang@stanford.edu" class="button is-small is-dark is-rounded mt-2">Mail</a>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-narrow">
+          <figure class="image is-128x128">
+            <img src="./static/images/organizer/jonas.jpeg" alt="Jonas Frey" class="speaker-crop" data-crop-x="50"
+              data-crop-y="50" data-zoom="1.0">
+          </figure>
+          <p><strong>Jonas Frey</strong></p>
+          <p>UCB / Stanford</p>
+          <a href="mailto:jonasfrey@stanford.edu" class="button is-small is-dark is-rounded mt-2">Mail</a>
+        </div>
+
+        <div class="column is-narrow">
+          <figure class="image is-128x128">
+            <img src="./static/images/organizer/matthew.jpg" alt="" class="speaker-crop" data-crop-x="50"
+              data-crop-y="50" data-zoom="1.0">
+          </figure>
+          <p><strong>Matthew Sivaprakasam</strong></p>
+          <p>CMU</p>
+          <a href="mailto:matthewsivaprakasam@cmu.edu" class="button is-small is-dark is-rounded mt-2">Mail</a>
+        </div>
+
+        <div class="column is-narrow">
+          <figure class="image is-128x128">
+            <img src="./static/images/organizer/micah.jpeg" alt="" class="speaker-crop" data-crop-x="50"
+              data-crop-y="50" data-zoom="1.0">
+          </figure>
+          <p><strong>Micah Nye</strong></p>
+          <p>CMU</p>
+          <a href="mailto:micahnye@cmu.edu" class="button is-small is-dark is-rounded mt-2">Mail</a>
+        </div>
+
+        <div class="column is-narrow">
+          <figure class="image is-128x128">
+            <img src="./static/images/organizer/sam.jpeg" alt="" class="speaker-crop" data-crop-x="50" data-crop-y="50"
+              data-zoom="1.0">
+          </figure>
+          <p><strong>Sam Triest</strong></p>
+          <p>CMU</p>
+          <a href="mailto:samtriest@cmu.edu" class="button is-small is-dark is-rounded mt-2">Mail</a>
+        </div>
+      </div>
+      <!-- <p>For questions regarding the workshop, contact: <a
+          href="mailto:grandtour@leggedrobotics.com">lf_nav@leggedrobotics.com</a></p> -->
+    </div>
+
+    <div style="margin: 3rem 0;"></div>
+
+    <!-- <div class="container has-text-centered">
+      <h2 class="title is-3">Senior Organizers</h2>
+
+      <div class="columns is-centered">
+        <div class="column is-narrow">
+          <figure class="image is-128x128">
+            <img src="./static/images/organizer/maurice.jpg" alt="Maurice Fallon" class="speaker-crop">
+          </figure>
+          <p><strong>Maurice Fallon</strong></p>
+          <p>University of Oxford</p>
+        </div>
+
+        <div class="column is-narrow">
+          <figure class="image is-128x128">
+            <img src="./static/images/organizer/pavone.jpg" alt="Marco Pavone" class="speaker-crop">
+          </figure>
+          <p><strong>Marco Pavone</strong></p>
+          <p>Stanford</p>
+        </div>
+
+        <div class="column is-narrow">
+          <figure class="image is-128x128">
+            <img src="./static/images/organizer/peyman.jpg" alt="Peyman Moghadam" class="speaker-crop">
+          </figure>
+          <p><strong>Peyman Moghadam</strong></p>
+          <p>CSIRO Data61</p>
+        </div>
+      </div>
+    </div> -->
+
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container has-text-centered">
+      <h2 class="title is-3">Sponsors</h2>
+
+      <p class="mt-4">We gratefully acknowledge the generous support of Leica Geosystems by Hexagon, FieldAI, Manifold
+        Tech, Naver Labs Europe, and Robotics and AI Institute, whose contributions have made this event possible.</p>
+
+      <style>
+        .sponsor-img {
+          margin-right: 1.5em;
+          margin-bottom: 1em;
+        }
+
+        .sponsor-img:last-child {
+          margin-right: 0;
+        }
+      </style>
+      <!-- And update your images: -->
+      <div
+        style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 2em; margin-bottom: 2em;">
+        <img src="./static/images/leica_double_brand.png" alt="Leica Geosystems" class="sponsor-img"
+          style="max-height:220px;">
+        <img src="./static/images/fieldai.png" alt="Field AI" class="sponsor-img" style="max-height:80px;">
+        <img src="./static/images/manifold.avif" alt="Manifold Tech" class="sponsor-img" style="max-height:200px;">
+
+
+      </div>
+
+      <div
+        style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 2em; margin-bottom: 2em;">
+        <img src="./static/images/naver.png" alt="Naver Labs" class="sponsor-img" style="max-height:160px;">
+        <img src="./static/images/rai.jpg" alt="RAI" class="sponsor-img" style="max-height:160px;">
+      </div>
+
+  </section>
+
+  <!-- RAI, and Field AI -->
