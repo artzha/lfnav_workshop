@@ -1,2 +1,4 @@
 exclude:
   - README.md
+  - _site
+  - .jekyll-cache
